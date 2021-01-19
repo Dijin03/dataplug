@@ -365,7 +365,8 @@ class Users extends CI_Controller {
             
             
         } else {
-            $this->session->set_flashdata('validate', array('message' => 'Your email already verified', 'type' => 'warning'));
+            $this->session->set_flashdata('validate',
+             array('message' => 'Your email already verified', 'type' => 'warning'));
         }
         redirect(base_url() . 'guest');
     }
