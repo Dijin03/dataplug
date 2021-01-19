@@ -339,7 +339,8 @@ class Users extends CI_Controller {
                          'type' => 'success'));
             	}
             	
-            	$query_department = $this->db->get_where('department', array('id' => $exist['department_id']));
+            	$query_department = $this->db->get_where('department',
+                 array('id' => $exist['department_id']));
             	$department_rec = $query_department->row_array();
             	
             		$sess_array = array(
