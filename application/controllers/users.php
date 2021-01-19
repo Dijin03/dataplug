@@ -308,7 +308,8 @@ class Users extends CI_Controller {
             );
             $this->db->where('id', $exist['id']);
             $this->db->update('users', $data);
-            $this->session->set_flashdata('validate', array('message' => 'Your account successfully verified', 'type' => 'success'));
+            $this->session->set_flashdata('validate',
+             array('message' => 'Your account successfully verified', 'type' => 'success'));
            
             //Send email to admin about new user signup
             $this->load->library('email');
