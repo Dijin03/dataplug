@@ -426,7 +426,8 @@ class Users extends CI_Controller {
 
     function username_not_available($key) {
         if ($this->users_model->username_already_exist($key)) {
-            $this->form_validation->set_message('username_not_available', '%s not available');
+            $this->form_validation->set_message('username_not_available',
+             '%s not available');
             return false;
         } else {
             return true;
