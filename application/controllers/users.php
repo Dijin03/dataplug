@@ -416,7 +416,8 @@ class Users extends CI_Controller {
 
     function department_name_exists($key) {
         if ($this->department_model->department_already_exist($key)) {
-            $this->form_validation->set_message('department_name_exists', 'The %s already exists');
+            $this->form_validation->set_message('department_name_exists',
+             'The %s already exists');
             return false;
         } else {
             return true;
