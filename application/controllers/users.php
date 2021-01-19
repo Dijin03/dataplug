@@ -329,7 +329,9 @@ class Users extends CI_Controller {
             $sess_array = array();
             
             	if ($exist['is_deleted'] == 1) {
-            		$this->session->set_flashdata('validate', array('message' => 'Your account has been deleted by admin.', 'type' => 'warning'));
+            		$this->session->set_flashdata('validate', 
+                    array('message' => 'Your account has been deleted by admin.',
+                     'type' => 'warning'));
             		redirect(base_url());
             	} else {
             		$this->session->set_flashdata('validate', array('message' => 'Your account successfully verified and logged in.', 'type' => 'success'));
