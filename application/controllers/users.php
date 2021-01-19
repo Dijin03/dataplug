@@ -334,7 +334,9 @@ class Users extends CI_Controller {
                      'type' => 'warning'));
             		redirect(base_url());
             	} else {
-            		$this->session->set_flashdata('validate', array('message' => 'Your account successfully verified and logged in.', 'type' => 'success'));
+            		$this->session->set_flashdata('validate', 
+                        array('message' => 'Your account successfully verified and logged in.',
+                         'type' => 'success'));
             	}
             	
             	$query_department = $this->db->get_where('department', array('id' => $exist['department_id']));
