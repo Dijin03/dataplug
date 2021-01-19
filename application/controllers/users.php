@@ -379,7 +379,8 @@ class Users extends CI_Controller {
     			$this->session->unset_userdata('view_session');
     			//session_destroy();
 
-		        $query = $this->db->get_where('users', array('id' => $slug, 'is_deleted' => '0'));
+		        $query = $this->db->get_where('users', 
+                    array('id' => $slug, 'is_deleted' => '0'));
 		        $exist = $query->row_array();
 		        $logary=array('action'=>'logout','description'=>'logout and auto login');
 		        addlog($logary);
