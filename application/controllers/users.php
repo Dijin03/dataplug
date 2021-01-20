@@ -581,7 +581,8 @@ class Users extends CI_Controller {
                         'Your account has been deactivaed or not approved yet.', 'type' => 'warning'));
                     redirect($refferer_url);
                 } else {
-                    $this->session->set_flashdata('validate', array('message' => 'You have successfully logged in.', 'type' => 'success'));
+                    $this->session->set_flashdata('validate', array('message' => 
+                        'You have successfully logged in.', 'type' => 'success'));
                 }
                 if ($row->department_id) {
                     $sess_array = array(
