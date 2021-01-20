@@ -568,7 +568,8 @@ class Users extends CI_Controller {
             	//$user_assigned_rights = $this->app_model->get_user_assigned_apps($user_id);
             	
                 if ($row->is_deleted == 1) {
-                    $this->session->set_flashdata('validate', array('message' => 'Your account has been deleted by admin.', 'type' => 'warning'));
+                    $this->session->set_flashdata('validate', array('message' => 
+                        'Your account has been deleted by admin.', 'type' => 'warning'));
                     redirect($refferer_url);
                 } else if ($row->verification_code != '') {
                     $this->session->set_flashdata('validate', array('message' => 'Limited time access , Your account not verified yet, please check your email and verify otherwise account will delete after 30 days.', 'type' => 'warning'));
