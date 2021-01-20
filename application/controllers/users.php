@@ -676,7 +676,8 @@ class Users extends CI_Controller {
 
     public function addgroup() {
         if (!$this->acl->hasPermission('groups', 'add')) {
-            $this->session->set_flashdata('validate', array('message' => "You don't have enough permissions to do this task.", 'type' => 'warning'));
+            $this->session->set_flashdata('validate', array('message' => 
+                "You don't have enough permissions to do this task.", 'type' => 'warning'));
             redirect(base_url() . 'groups');
         }
 
