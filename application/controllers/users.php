@@ -643,7 +643,8 @@ class Users extends CI_Controller {
             $session_data = $this->session->userdata('logged_in');
             session_to_page($session_data, $data);
 
-            $groups = $this->users_model->groups($data['login_department_id'], $data['login_parent_id'], $data['login_group_id']);
+            $groups = $this->users_model->groups($data['login_department_id'],
+             $data['login_parent_id'], $data['login_group_id']);
 
             foreach ($groups as $group) {
 
