@@ -577,7 +577,8 @@ class Users extends CI_Controller {
                          otherwise account will delete after 30 days.', 'type' => 'warning'));
                     //redirect($refferer_url);
                 } else if($row->status == 0) {
-                    $this->session->set_flashdata('validate', array('message' => 'Your account has been deactivaed or not approved yet.', 'type' => 'warning'));
+                    $this->session->set_flashdata('validate', array('message' => 
+                        'Your account has been deactivaed or not approved yet.', 'type' => 'warning'));
                     redirect($refferer_url);
                 } else {
                     $this->session->set_flashdata('validate', array('message' => 'You have successfully logged in.', 'type' => 'success'));
