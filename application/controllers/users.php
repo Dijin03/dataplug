@@ -880,7 +880,8 @@ class Users extends CI_Controller {
         if ($this->input->post()) {
 
             if ($this->acl->hasSuperAdmin()) {
-                $this->form_validation->set_rules('department_id', 'Department', 'trim|required|xss_clean');
+                $this->form_validation->set_rules('department_id',
+                 'Department', 'trim|required|xss_clean');
             }
             $this->form_validation->set_rules('group_id', 'Group', 'trim|required|xss_clean');
             $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|min_length[1]|xss_clean');
