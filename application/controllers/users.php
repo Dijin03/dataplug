@@ -861,7 +861,8 @@ class Users extends CI_Controller {
     public function adduser() {
 
         if (!$this->acl->hasPermission('users', 'add')) {
-            $this->session->set_flashdata('validate', array('message' => "You don't have enough permissions to do this task.", 'type' => 'warning'));
+            $this->session->set_flashdata('validate', array('message' =>
+             "You don't have enough permissions to do this task.", 'type' => 'warning'));
             redirect(base_url() . 'users');
         }
         $this->load->library('form_validation');
