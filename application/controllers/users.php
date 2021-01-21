@@ -883,7 +883,8 @@ class Users extends CI_Controller {
                 $this->form_validation->set_rules('department_id',
                  'Department', 'trim|required|xss_clean');
             }
-            $this->form_validation->set_rules('group_id', 'Group', 'trim|required|xss_clean');
+            $this->form_validation->set_rules('group_id',
+             'Group', 'trim|required|xss_clean');
             $this->form_validation->set_rules('first_name', 'First Name', 'trim|required|min_length[1]|xss_clean');
             $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required|min_length[1]|xss_clean');
             //$this->form_validation->set_rules('username', 'User Name', 'trim|required|callback_username_not_available');
