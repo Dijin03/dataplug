@@ -893,7 +893,8 @@ class Users extends CI_Controller {
             // 'User Name', 'trim|required|callback_username_not_available');
             $this->form_validation->set_rules('email', 'Email',
              'trim|required|valid_email|callback_email_not_available');
-            $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
+            $this->form_validation->set_rules('password',
+             'Password', 'trim|required|min_length[4]|max_length[32]');
             $this->form_validation->set_rules('conf_password', 'Password Confirmation', 'trim|required|matches[password]');
 
             if ($this->form_validation->run() == FALSE) {
