@@ -1091,7 +1091,9 @@ class Users extends CI_Controller {
                     $this->users_model->edit_user($user_id, $userdata);
                     //array parameters : action, description, before, 
                     //after, app_id, app_name, form_id, form_name
-                    $logary=array('action'=>'update','description'=>'edit profile - password change','after'=>  json_encode($userdata),'before'=>  json_encode($user_rec));
+                    $logary=array('action'=>'update','description'=>
+                        'edit profile - password change','after'=>  json_encode($userdata),
+                        'before'=>  json_encode($user_rec));
                     addlog($logary);
 
                     $this->load->library('email');
