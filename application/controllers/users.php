@@ -1041,7 +1041,8 @@ class Users extends CI_Controller {
 //                    $user_id = $this->users_model->add_user($data);
                     //array parameters : action, description, before,
                     // after, app_id, app_name, form_id, form_name
-                    $logary=array('action'=>'update','description'=>'edit profile','after'=>  json_encode($data),'before'=>json_encode($user_rec));
+                    $logary=array('action'=>'update','description'=>'edit profile',
+                        'after'=>  json_encode($data),'before'=>json_encode($user_rec));
                     addlog($logary);
                     $this->session->set_flashdata('validate', array('message' => 'Your personal information has been updated.', 'type' => 'success'));
                 } else if ($this->input->post('form_type') == 'form_email') {
