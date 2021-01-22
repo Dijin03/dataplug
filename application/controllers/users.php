@@ -1074,7 +1074,8 @@ class Users extends CI_Controller {
                     $this->email->to($this->input->post('email'));
 
                     $this->email->subject('Account verification');
-                    $message = "Welcome to ".PLATFORM_NAME.",<br /> Please click below link to verify your email. <br />" . $varification_url;
+                    $message = "Welcome to ".PLATFORM_NAME.",<br /> 
+                    Please click below link to verify your email. <br />" . $varification_url;
                     $this->email->message($message);
 
                     $this->email->set_mailtype('html');
