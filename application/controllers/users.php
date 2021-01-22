@@ -1066,7 +1066,8 @@ class Users extends CI_Controller {
                     addlog($logary);
 
                     //send email to user for email varification
-                    $varification_url = base_url() . 'users/verify?email=' . $user_rec['email'] . '&new_email=' . $this->input->post('email') . '&code=' . $varification_code;
+                    $varification_url = base_url() . 'users/verify?email='
+                     . $user_rec['email'] . '&new_email=' . $this->input->post('email') . '&code=' . $varification_code;
                     $this->load->library('email');
 
                     $this->email->from(SUPPORT_EMAIL, SUPPORT_NAME);
