@@ -1080,7 +1080,9 @@ class Users extends CI_Controller {
 
                     $this->email->set_mailtype('html');
                     $this->email->send();
-                    $this->session->set_flashdata('validate', array('message' => 'Your email has been changed, please verify your email account.', 'type' => 'success'));
+                    $this->session->set_flashdata('validate', array('message' => 
+                        'Your email has been changed, please verify your email account.',
+                         'type' => 'success'));
                     redirect(base_url() . "apps");
                 } else if ($this->input->post('form_type') == 'form_password') {
 
