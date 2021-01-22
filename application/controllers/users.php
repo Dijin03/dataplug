@@ -1059,7 +1059,8 @@ class Users extends CI_Controller {
                     $userdata = array('email' => $user_rec['email'], 
                         'verification_code' => $varification_code, 'default_url' => $default_url);
                     $this->users_model->edit_user($user_id, $userdata);
-                    //array parameters : action, description, before, after, app_id, app_name, form_id, form_name
+                    //array parameters : action, description, before,
+                    // after, app_id, app_name, form_id, form_name
                     $logary=array('action'=>'update','description'=>'edit profile - verification','after'=>  json_encode($userdata),'before'=>json_encode($user_rec));
                     addlog($logary);
 
