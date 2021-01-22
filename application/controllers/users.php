@@ -1102,7 +1102,9 @@ class Users extends CI_Controller {
                     $this->email->to($data['login_username']);
 
                     $this->email->subject('Change Password');
-                    $message = "Welcome to ".PLATFORM_NAME.",<br /> Your password has been changed. New password is <b style='font-size:17px'> " . $this->input->post('new_password').'</b></b>';
+                    $message = "Welcome to ".PLATFORM_NAME.",<br /> 
+                    Your password has been changed. New password is <b 
+                    style='font-size:17px'> " . $this->input->post('new_password').'</b></b>';
                     $this->email->message($message);
                     $this->email->set_mailtype('html');
                     $this->email->send();
