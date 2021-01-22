@@ -1051,7 +1051,8 @@ class Users extends CI_Controller {
                     $userurl = array('default_url' => $this->input->post('default_url'));
                     $this->users_model->edit_user($user_id, $userurl);
                     if ($user_rec['email'] == $this->input->post('email')) {
-                        $this->session->set_flashdata('validate', array('message' => 'You have not changed email.', 'type' => 'warning'));
+                        $this->session->set_flashdata('validate', array('message' => 
+                            'You have not changed email.', 'type' => 'warning'));
                         redirect(base_url() . 'user-profile/' . $user_id);
                     }
                     $varification_code = random_string('alnum', 50);
