@@ -1135,7 +1135,8 @@ class Users extends CI_Controller {
 
 
         if (!$this->acl->hasPermission('users', 'edit')) {
-            $this->session->set_flashdata('validate', array('message' => "You don't have enough permissions to do this task.", 'type' => 'warning'));
+            $this->session->set_flashdata('validate', array('message' =>
+             "You don't have enough permissions to do this task.", 'type' => 'warning'));
             redirect(base_url() . 'users');
         }
         $user_rec = $this->users_model->get_user_by_id($user_id);
